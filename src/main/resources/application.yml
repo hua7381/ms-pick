@@ -20,7 +20,7 @@ spring:
             test-while-idle: true
             test-on-return: false
 server:
-    port: 81
+    port: 17002
     servlet:
         context-path: /pick
         session:
