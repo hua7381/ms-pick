@@ -14,13 +14,21 @@
 
 # update
 ```
-cd c:/zgh/code/ms-recognize
+
+cd "c:/zgh/code/ms-recognize"
 git pull
 git pull
+
 c:/apps/java-services/ms-recognize stop
+
 mvn clean
 mvn install
+
+cd "c:/apps/jar/"
+del "ms-recognize-1.0.jar"
+
+cd "c:/zgh/code/ms-recognize/target"
 copy "ms-recognize-1.0.jar" "c:/apps/jar/"
-Yes
+
 c:/apps/java-services/ms-recognize start
 ```
