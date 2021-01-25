@@ -1,6 +1,7 @@
 package com.hnkc.pick.other;
 
 import com.hnkc.pick.model.po.Book;
+import com.hnkc.pick.model.po.Element;
 import com.hnkc.pick.frame.Enums;
 import com.hnkc.pick.frame.dict.Dict;
 import com.hnkc.pick.frame.tool.EnumTool;
@@ -22,5 +23,14 @@ public class EntityTool {
             one.setStatusName(EnumTool.getLabel(Enums.BookStatusEnum.class, one.getStatus()));
         }
     }
+
+	public static void fillProps(Element one) {
+        if (one != null) {
+            one.setTypeName(EnumTool.getLabel(Enums.ElementType.class, one.getType()));
+            if(one.getContent() != null) {
+                one.setLength(one.getContent().length());
+            }
+        }
+	}
 
 }

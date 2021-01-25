@@ -46,7 +46,8 @@ public class ShiroConfig {
         chainMap.put("/dict/**", "anon");
         chainMap.put("/currentUser/**", "anon");
         // chainMap.put("/test/**", "authc");
-        chainMap.put("/**", "MyShiroAuthFilter");
+        // chainMap.put("/**", "MyShiroAuthFilter");
+        chainMap.put("/**", "anon");
         bean.setFilterChainDefinitionMap(chainMap);
 
         Map<String,Filter> filters = new HashMap<String,Filter>(10);

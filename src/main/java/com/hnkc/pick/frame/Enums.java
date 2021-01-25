@@ -59,4 +59,33 @@ public class Enums {
         }
     }
 
+    public static final String ELEMENT_TYPE_DESCR = "MOBILE: 手机号";
+    /**
+     * @author zhangguihua
+     * @date 2021年1月23日
+     */
+    public enum ElementType {
+        /** */
+        MOBILE("MOBILE", "手机号"),
+        ID_CARD("ID_CARD", "身份证号"),
+        BANK_CARD("BANK_CARD", "银行卡号"),
+        PLATE("PLATE", "车牌号"),
+        ADDRESS("ADDRESS", "地址"),
+        QQ("QQ", "QQ号");
+
+        private ElementType(String id, String label) {
+            this.id = id;
+            this.label = label;
+        }
+
+        private String id;
+        private String label;
+        public String getId() {
+            return id;
+        }
+        public String getLabel() {
+            return label;
+        }
+    }
+
 }
