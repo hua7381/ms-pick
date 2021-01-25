@@ -40,11 +40,11 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-            .title("TODO 此处添加标题")
+            .title("kc-微服务-识别与要素提取")
             // 创建人
-            .contact(new Contact("TODO 此处添加联系人", "", ""))
+            .contact(new Contact("zgh", "", ""))
             .version("1.001")
-            .description("TODO 此处添加描述").build();
+            .description("").build();
     }
 
 }

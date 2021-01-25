@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class ElementService {
 
-    public List<Element> getList(String content) {
+    public List<Element> pickList(String content) {
         List<Element> list = new ArrayList<Element>();
         list.addAll(getMobiles(content));
         list.addAll(getIdCards(content));

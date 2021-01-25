@@ -1,6 +1,6 @@
 package com.hnkc.recognize.model.param;
 
-public class ParamOfRecognize {
+public class ParamOfPick {
     private String text;
 
     public String getText() {
