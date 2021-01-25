@@ -5,10 +5,10 @@
     <appender name="LOGSTASH" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!-- 自定义日志格式 -->
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
-            <layout class="com.hnkc.pick.frame.config.MyLogLayout"/>
+            <layout class="com.hnkc.recognize.frame.config.MyLogLayout"/>
         </encoder>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/log/filebeat/ms-pick/app-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <fileNamePattern>/log/filebeat/ms-recognize/app-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>5</maxHistory>
         </rollingPolicy>
         <!-- 过滤DEBUG -->

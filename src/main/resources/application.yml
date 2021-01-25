@@ -22,7 +22,7 @@ spring:
 server:
     port: 17002
     servlet:
-        context-path: /pick
+        context-path: /recognize
         session:
             timeout: 1m
             tracking-modes: cookie
@@ -33,7 +33,7 @@ logging:
         com.hnkc: INFO
 mybatis-plus:
     mapper-locations: classpath:mybatis/mapper/*.xml
-    type-aliases-package: com.hnkc.pick.model
+    type-aliases-package: com.hnkc.recognize.model
     configuration:
         map-underscore-to-camel-case: true
 swagger:
