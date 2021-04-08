@@ -19,10 +19,12 @@ public class ElementService {
 
     public List<Element> pickList(String content) {
         List<Element> list = new ArrayList<Element>();
-        list.addAll(getMobiles(content));
-        list.addAll(getIdCards(content));
-        list.addAll(getBankCards(content));
-        list.addAll(getPlates(content));
+        if(content != null) {
+            list.addAll(getMobiles(content));
+            list.addAll(getIdCards(content));
+            list.addAll(getBankCards(content));
+            list.addAll(getPlates(content));
+        }
         return list;
     }
 
@@ -56,8 +58,8 @@ public class ElementService {
     }
 
     private List<Element> find(String content, String reg, String type) {
-        Matcher mc = Pattern.compile(reg).matcher(content);
         List<Element> list = new ArrayList<Element>();
+        Matcher mc = Pattern.compile(reg).matcher(content);
         while(mc.find()) {
             Element ele = new Element();
             ele.setType(type);
