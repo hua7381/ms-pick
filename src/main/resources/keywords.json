@@ -1,0 +1,22 @@
+[
+    {
+        "keyword": "盗窃",
+        "containList": ["门锁被撬", "撬锁", "偷", "盗"],
+        "excludeList": []
+    }, 
+    {
+        "keyword": "诈骗",
+        "containList": ["骗", "冒充", "转账"],
+        "excludeList": []
+    },
+    {
+        "keyword": "打架",
+        "containList": ["打架", "斗殴", "殴打", "被打", "打人", "肢体冲突"],
+        "excludeList": []
+    },
+    {
+        "keyword": "网贷",
+        "containList": ["网贷", "网络贷款"],
+        "excludeList": []
+    }
+]
