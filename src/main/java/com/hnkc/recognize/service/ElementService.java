@@ -6,7 +6,6 @@ import java.util.List;
 import com.hnkc.recognize.handler.AddressPicker;
 import com.hnkc.recognize.handler.BankCardPicker;
 import com.hnkc.recognize.handler.IdCardPicker;
-import com.hnkc.recognize.handler.KeywordPicker;
 import com.hnkc.recognize.handler.MobilePicker;
 import com.hnkc.recognize.handler.PlatePicker;
 import com.hnkc.recognize.model.po.Element;
@@ -28,7 +27,6 @@ public class ElementService {
             list.addAll(new BankCardPicker().pick(content));
             list.addAll(new PlatePicker().pick(content));
             list.addAll(new AddressPicker().pick(content));
-            list.addAll(new KeywordPicker().pick(content));
         }
         return list;
     }
