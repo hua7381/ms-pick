@@ -2,12 +2,32 @@
 
     {
         "keyword": "盗窃",
-        "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁"]
+        "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷"],
+        "subList": [
+            { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
+
+            { "keyword": "从窗入侵", "containList": ["窗"], "excludeList": [] },
+            
+            { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
+            { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
+            { "keyword": "摩托车", "containList": ["摩托车"], "excludeList": [] },
+            { "keyword": "电动车", "containList": ["电动车", "电动三轮车"], "excludeList": [] },
+            { "keyword": "自行车", "containList": ["自行车"], "excludeList": [] },
+            { "keyword": "车牌", "containList": ["车牌", "车牌号"], "excludeList": [] },
+            { "keyword": "电瓶", "containList": ["电瓶", "电池"], "excludeList": [] },
+            { "keyword": "手机", "containList": ["手机"], "excludeList": [] },
+            { "keyword": "电脑", "containList": ["电脑"], "excludeList": [] },
+            { "keyword": "宠物", "containList": ["犬只"], "excludeList": [] },
+            { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
+            { "keyword": "现金", "containList": ["现金", "钱", "银行卡"], "excludeList": [] }
+        ]
     },
+
     {
         "keyword": "诈骗",
-        "containList": ["骗", "冒充", "转账"], "excludeList": []
+        "containList": ["骗", "冒充", "转账", "盗刷"], "excludeList": []
     },
+    
     {
         "keyword": "打架",
         "containList": ["打架", "斗殴", "殴打", "被打", "被人打", "打人", "肢体冲突"], "excludeList": []
@@ -76,20 +96,7 @@
 
     {
         "keyword": "工地",
-        "containList": ["工地"], "excludeList": [""]
-    },
-
-    {
-        "keyword": "手机",
-        "containList": ["手机"], "excludeList": ["手机号码"]
-    },
-    {
-        "keyword": "现金",
-        "containList": ["现金", "银行卡&钱"], "excludeList": [""]
-    },
-    {
-        "keyword": "汽车",
-        "containList": ["汽车", "小车", "轿车"], "excludeList": [""]
+        "containList": ["工地"], "excludeList": []
     },
 
     {
@@ -110,7 +117,7 @@
     },
     {
         "keyword": "受伤",
-        "containList": ["受伤", "出血", "刺伤", "砍伤", "打伤"], "excludeList": []
+        "containList": ["受伤", "出血", "刺伤", "砍伤", "打伤"], "excludeList": ["无人受伤"]
     },
     {
         "keyword": "醉酒",

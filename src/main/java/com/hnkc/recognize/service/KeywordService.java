@@ -66,6 +66,14 @@ public class KeywordService {
             String keyword = checkReg(content, reg);
             if (StringUtils.isNotEmpty(keyword)) {
                 res.add(keyword);
+                if(reg.getSubList() != null) {
+                    for(KeywordReg subReg : reg.getSubList()) {
+                        String subKeyword = checkReg(content, subReg);
+                        if(StringUtils.isNotEmpty(subKeyword)) {
+                            res.add(subKeyword);
+                        }
+                    }
+                }
             }
         }
         return res;
@@ -93,6 +101,9 @@ public class KeywordService {
     }
 
     private boolean contain(String content, String word) {
+        if(StringUtils.isEmpty(word)) {
+            return false;
+        }
         if (word.contains("&")) {
             for (String subWord : word.split("&")) {
                 if (!content.contains(subWord)) {
