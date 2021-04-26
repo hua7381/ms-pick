@@ -2,25 +2,31 @@
 
     {
         "keyword": "盗窃",
-        "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷"],
+        "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷", "骗&转账"],
         "subList": [
             { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
 
-            { "keyword": "从窗入侵", "containList": ["窗"], "excludeList": [] },
-            
+            { "keyword": "从窗入侵", "containList": ["窗"], "excludeList": ["窗没有"] },
+
             { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
             { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
             { "keyword": "摩托车", "containList": ["摩托车"], "excludeList": [] },
-            { "keyword": "电动车", "containList": ["电动车", "电动三轮车"], "excludeList": [] },
+            { "keyword": "电动车", "containList": ["电动车", "电动三轮车"], "excludeList": ["电池", "电瓶"] },
             { "keyword": "自行车", "containList": ["自行车"], "excludeList": [] },
-            { "keyword": "车牌", "containList": ["车牌", "车牌号"], "excludeList": [] },
+            { "keyword": "车牌", "containList": ["车牌", "车牌号", "没有车牌", "无车牌", "车牌不详"], "excludeList": [] },
             { "keyword": "电瓶", "containList": ["电瓶", "电池"], "excludeList": [] },
             { "keyword": "手机", "containList": ["手机"], "excludeList": [] },
-            { "keyword": "电脑", "containList": ["电脑"], "excludeList": [] },
+            { "keyword": "电脑", "containList": ["电脑"], "excludeList": ["平板电脑"] },
+            { "keyword": "平板电脑", "containList": ["平板电脑"], "excludeList": [] },
             { "keyword": "宠物", "containList": ["犬只"], "excludeList": [] },
             { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
+            { "keyword": "电线", "containList": ["电线"], "excludeList": [] },
             { "keyword": "现金", "containList": ["现金", "钱", "银行卡"], "excludeList": [] }
         ]
+    },
+    {
+        "keyword": "走失",
+        "containList": ["走失", "离家出走", "失联", "小孩&不见"], "excludeList": []
     },
 
     {
@@ -69,10 +75,6 @@
         "containList": ["自杀", "轻生", "遗书"], "excludeList": []
     },
     {
-        "keyword": "走失",
-        "containList": ["走失", "离家出走", "外出&失联", "至今&失联"], "excludeList": []
-    },
-    {
         "keyword": "医疗救护",
         "containList": ["救护车"], "excludeList": []
     },
@@ -92,11 +94,6 @@
     {
         "keyword": "火灾",
         "containList": ["火灾", "起火", "火势", "着火"], "excludeList": []
-    },
-
-    {
-        "keyword": "工地",
-        "containList": ["工地"], "excludeList": []
     },
 
     {
