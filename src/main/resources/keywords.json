@@ -7,6 +7,10 @@
             { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
 
             { "keyword": "从窗入侵", "containList": ["窗"], "excludeList": ["窗没有"] },
+            { "keyword": "从门入侵", "containList": ["撬门"], "excludeList": [] },
+
+            { "keyword": "撬门", "containList": ["撬门"], "excludeList": [] },
+            { "keyword": "破窗", "containList": ["破&窗"], "excludeList": [] },
 
             { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
             { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
@@ -18,9 +22,17 @@
             { "keyword": "手机", "containList": ["手机"], "excludeList": [] },
             { "keyword": "电脑", "containList": ["电脑"], "excludeList": ["平板电脑"] },
             { "keyword": "平板电脑", "containList": ["平板电脑"], "excludeList": [] },
-            { "keyword": "宠物", "containList": ["犬只"], "excludeList": [] },
+            { "keyword": "宠物", "containList": ["犬只", "猫只"], "excludeList": [] },
+            { "keyword": "家畜", "containList": ["鸡", "鸭"], "excludeList": [] },
             { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
             { "keyword": "电线", "containList": ["电线"], "excludeList": [] },
+            { "keyword": "不锈钢", "containList": ["不锈钢"], "excludeList": [] },
+            { "keyword": "树木", "containList": ["树木"], "excludeList": [] },
+            { "keyword": "铜管", "containList": ["铜管"], "excludeList": [] },
+            { "keyword": "手提包", "containList": ["手提包"], "excludeList": [] },
+            { "keyword": "建筑工具", "containList": ["建筑工具"], "excludeList": [] },
+            { "keyword": "平衡车", "containList": ["平衡车"], "excludeList": [] },
+            { "keyword": "快递", "containList": ["快递"], "excludeList": [] },
             { "keyword": "现金", "containList": ["现金", "钱", "银行卡"], "excludeList": [] }
         ]
     },
