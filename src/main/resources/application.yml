@@ -40,17 +40,3 @@ swagger:
     enable: true
 config:
     webTitle: 
-
----
-spring:
-    profiles: DEV
-    datasource:
-        url: jdbc:oracle:thin:@0.0.0.0:1521/dev
-        username: xxx
-        password: xxx
-logging:
-    level:
-        com.hnkc: DEBUG
-config:
-    webTitle: 示例程序页面标题
-

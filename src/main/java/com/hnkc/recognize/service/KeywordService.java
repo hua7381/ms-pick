@@ -4,25 +4,59 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.alibaba.fastjson.JSON;
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.hnkc.recognize.dao.ContentDao;
+import com.hnkc.recognize.model.po.Content;
 import com.hnkc.recognize.model.vo.KeywordReg;
 import com.hnkc.recognize.other.Tool;
 
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class KeywordService {
 
+    @Autowired
+    ContentDao contentDao;
+
+    private static final Integer PAGE_SIZE = 100;
+
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    public List<String> test1(String content) {
+    public void test1() {
+        IPage<Content> page = new Page<Content>(1, PAGE_SIZE);
+        LambdaQueryWrapper<Content> wrapper = Wrappers.lambdaQuery(Content.class);
+        wrapper.orderByAsc(Content::getId);
+        
+        IPage<Content> res = contentDao.selectPage(page, wrapper);
+        logger.info("pages: " + res.getPages());
+        for(int i = 1; i<=page.getPages(); i++) {
+            logger.info(String.format("handling page %s/%s", i, page.getPages()));
+            eachPage(i, wrapper);
+        }
+        logger.info("finish");
+    }
+
+    private void eachPage(int pageNum, LambdaQueryWrapper<Content> wrapper) {
+        IPage<Content> page = new Page<Content>(pageNum, PAGE_SIZE);
+        IPage<Content> res = contentDao.selectPage(page, wrapper);
+        for(Content one : res.getRecords()) {
+            one.setKeywords(JSON.toJSONString(pickList(one.getContent())));
+            contentDao.updateById(one);
+        }
+    }
+
+    public List<String> pickList(String content) {
         List<String> res = new ArrayList<String>();
         String json = Tool.readFileFromClasspath("keywords.json");
         List<KeywordReg> regs = JSON.parseArray(json, KeywordReg.class);
         res = check(content, regs);
-        logger.info(JSON.toJSONString(res));
         return res;
     }
 
@@ -59,9 +93,9 @@ public class KeywordService {
     }
 
     private boolean contain(String content, String word) {
-        if(word.contains("&")) {
-            for(String subWord : word.split("&")) {
-                if(!content.contains(subWord)) {
+        if (word.contains("&")) {
+            for (String subWord : word.split("&")) {
+                if (!content.contains(subWord)) {
                     return false;
                 }
             }

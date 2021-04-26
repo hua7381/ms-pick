@@ -1,0 +1,12 @@
+spring:
+  profiles: DEV
+  datasource:
+    url: jdbc:oracle:thin:@vip3gz.idcfengye.com:10401/hnkcdb
+    username: zgh
+    password: Created!12
+logging:
+  level:
+    com.hnkc: INFO
+config:
+  webTitle: 示例程序页面标题
+

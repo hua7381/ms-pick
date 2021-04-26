@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 
 @Api(tags = "关键词")
 @RestController
@@ -22,9 +23,15 @@ public class KeywordController {
     @Autowired
     private KeywordService service;
     
-    @PostMapping("test1")
-    public List<String> test1(@RequestBody ParamOfPickKeywords content) {
-        return service.test1(content.getContent());
+    @GetMapping("test1")
+    public void test1() {
+        service.test1();
+    }
+    
+    @ApiOperation("提取")
+    @PostMapping("pickList")
+    public List<String> pickList(@RequestBody ParamOfPickKeywords content) {
+        return service.pickList(content.getContent());
     }
 
 }
