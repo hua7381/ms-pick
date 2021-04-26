@@ -26,14 +26,20 @@
             { "keyword": "家畜", "containList": ["鸡", "鸭"], "excludeList": [] },
             { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
             { "keyword": "电线", "containList": ["电线"], "excludeList": [] },
+            { "keyword": "电缆", "containList": ["电缆"], "excludeList": [] },
+            { "keyword": "水泵", "containList": ["水泵"], "excludeList": [] },
+            { "keyword": "水管", "containList": ["水管"], "excludeList": [] },
+            { "keyword": "衣服", "containList": ["衣服"], "excludeList": [] },
+            { "keyword": "首饰", "containList": ["首饰","项链","戒指"], "excludeList": [] },
             { "keyword": "不锈钢", "containList": ["不锈钢"], "excludeList": [] },
             { "keyword": "树木", "containList": ["树木"], "excludeList": [] },
             { "keyword": "铜管", "containList": ["铜管"], "excludeList": [] },
             { "keyword": "手提包", "containList": ["手提包"], "excludeList": [] },
+            { "keyword": "钱包", "containList": ["钱包"], "excludeList": [] },
             { "keyword": "建筑工具", "containList": ["建筑工具"], "excludeList": [] },
             { "keyword": "平衡车", "containList": ["平衡车"], "excludeList": [] },
             { "keyword": "快递", "containList": ["快递"], "excludeList": [] },
-            { "keyword": "现金", "containList": ["现金", "钱", "银行卡"], "excludeList": [] }
+            { "keyword": "现金", "containList": ["现金", "钱", "银行卡", "元被盗"], "excludeList": [] }
         ]
     },
     {
