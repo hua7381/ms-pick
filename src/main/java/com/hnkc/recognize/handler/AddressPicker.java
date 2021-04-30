@@ -6,7 +6,7 @@ import java.util.List;
 import com.hnkc.recognize.frame.Enums;
 import com.hnkc.recognize.model.po.Element;
 
-public class AddressPicker extends BasePicker implements Picker {
+public class AddressPicker implements Picker {
     String[] beginTags = { "地址:", "地:" };
     String[] endTags = { " ", ",", ".", "\n" };
 

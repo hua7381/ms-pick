@@ -1,6 +1,7 @@
 package com.hnkc.recognize.service;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
@@ -48,7 +49,7 @@ public class TestService {
         for(Content one : res.getRecords()) {
             String content = one.getContent() + one.getDisposeSituation();
             one.setKeywords(JSON.toJSONString(keywordService.pickList(content)));
-            one.setClues(JSON.toJSONString(elementService.pickList(content)));
+            one.setClues(JSON.toJSONString(elementService.pickList(content), SerializerFeature.PrettyFormat));
             contentDao.updateById(one);
         }
     }

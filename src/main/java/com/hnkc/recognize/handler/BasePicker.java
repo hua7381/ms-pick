@@ -14,11 +14,11 @@ public class BasePicker {
     protected List<Element> find(String content, String reg, String type) {
         List<Element> list = new ArrayList<Element>();
         Set<String> set = new HashSet<String>();
-        Matcher mc = Pattern.compile(reg).matcher(content);
-        while (mc.find()) {
+        Matcher mather = Pattern.compile("\\D" + reg + "\\D").matcher("#" + content + "#");
+        while (mather.find()) {
             Element ele = new Element();
             ele.setType(type);
-            ele.setContent(mc.group());
+            ele.setContent(cut(mather.group()));
             
             if(!set.contains(ele.getContent())) {
                 list.add(ele);
@@ -26,6 +26,10 @@ public class BasePicker {
             }
         }
         return list;
+    }
+
+    private String cut(String str) {
+        return str.substring(1, str.length() - 1);
     }
 
 }

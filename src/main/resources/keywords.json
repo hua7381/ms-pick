@@ -86,7 +86,7 @@
     },
     {
         "keyword": "交通堵塞",
-        "containList": ["堵塞出入", "车&塞", "交通堵塞"], "excludeList": []
+        "containList": ["堵塞出入", "车&出入", "车&塞", "交通堵塞"], "excludeList": []
     },
     {
         "keyword": "自杀",
@@ -132,10 +132,14 @@
     },
     {
         "keyword": "受伤",
-        "containList": ["受伤", "出血", "刺伤", "砍伤", "打伤"], "excludeList": ["无人受伤"]
+        "containList": ["受伤", "出血", "刺伤", "砍伤", "打伤"], "excludeList": ["无人受伤", "未受伤"]
     },
     {
         "keyword": "醉酒",
         "containList": ["醉酒", "喝醉"], "excludeList": []
+    },
+    {
+        "keyword": "闹事",
+        "containList": ["闹事"], "excludeList": []
     }
 ]
