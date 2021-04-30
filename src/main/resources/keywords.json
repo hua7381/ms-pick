@@ -96,10 +96,6 @@
         "containList": ["自杀", "轻生", "遗书"], "excludeList": []
     },
     {
-        "keyword": "医疗救护",
-        "containList": ["救护车"], "excludeList": []
-    },
-    {
         "keyword": "涉港",
         "containList": ["香港"], "excludeList": ["六合彩"]
     },
@@ -118,15 +114,15 @@
     },
 
     {
-        "keyword": "遗留",
-        "containList": ["遗留"], "excludeList": []
+        "keyword": "遗失",
+        "containList": ["遗留", "遗失"], "excludeList": []
     },
     {
         "keyword": "滴滴",
         "containList": ["滴滴"], "excludeList": []
     },
     {
-        "keyword": "老年人",
+        "keyword": "老人",
         "containList": ["老人", "老年", "老年人"], "excludeList": []
     },
     {
