@@ -9,6 +9,7 @@ import com.hnkc.recognize.handler.IdCardPicker;
 import com.hnkc.recognize.handler.MobilePicker;
 import com.hnkc.recognize.handler.PlatePicker;
 import com.hnkc.recognize.model.po.Element;
+import com.hnkc.recognize.other.EntityTool;
 
 import org.springframework.stereotype.Service;
 
@@ -27,6 +28,9 @@ public class ElementService {
             list.addAll(new BankCardPicker().pick(content));
             list.addAll(new PlatePicker().pick(content));
             list.addAll(new AddressPicker().pick(content));
+        }
+        for (Element one : list) {
+            EntityTool.fillProps(one);
         }
         return list;
     }
