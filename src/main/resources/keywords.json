@@ -4,13 +4,6 @@
         "keyword": "盗窃",
         "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷", "骗&转账"],
         "subList": [
-            { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
-
-            { "keyword": "从窗入侵", "containList": ["窗"], "excludeList": ["窗没有"] },
-            { "keyword": "从门入侵", "containList": ["撬门"], "excludeList": [] },
-
-            { "keyword": "撬门", "containList": ["撬门"], "excludeList": [] },
-            { "keyword": "破窗", "containList": ["破&窗"], "excludeList": [] },
 
             { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
             { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
@@ -42,6 +35,12 @@
             { "keyword": "现金", "containList": ["现金", "钱", "银行卡", "元被盗"], "excludeList": [] }
         ]
     },
+    
+    { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
+    
+    { "keyword": "撬门", "containList": ["撬门"], "excludeList": [] },
+    { "keyword": "破窗", "containList": ["破&窗"], "excludeList": [] },
+
     {
         "keyword": "走失",
         "containList": ["走失", "离家出走", "失联", "小孩&不见"], "excludeList": []
@@ -85,8 +84,12 @@
         "containList": ["噪音", "声&扰民"], "excludeList": []
     },
     {
-        "keyword": "交通堵塞",
-        "containList": ["堵塞出入", "车&出入", "车&塞", "交通堵塞"], "excludeList": []
+        "keyword": "堵车",
+        "containList": ["车&堵", "车&塞", "车&出入", "交通堵塞"], "excludeList": []
+    },
+    {
+        "keyword": "乱停乱放",
+        "containList": ["乱停乱放", "乱停"], "excludeList": []
     },
     {
         "keyword": "自杀",
