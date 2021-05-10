@@ -1,0 +1,10 @@
+spring:
+  profiles: PRODUCT
+  # 不用连数据库，不用改下面的数据库连接配置
+  datasource:
+    url: jdbc:oracle:thin:@XXX.XXX.XXX:XXX/XXX
+    username: XXX
+    password: XXX
+config:
+  webTitle: 示例程序页面标题
+
