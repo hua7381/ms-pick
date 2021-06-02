@@ -73,7 +73,8 @@ public class Enums {
         ADDRESS("ADDRESS", "地址"),
         QQ("QQ", "QQ号"),
         WEIXIN("WEIXIN", "微信"),
-        ALIPAY("ALIPAY", "支付宝");
+        ALIPAY("ALIPAY", "支付宝"),
+        CASE_NO("CASE_NO", "案件编号");
 
         private ElementType(String id, String label) {
             this.id = id;

@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.hnkc.recognize.handler.AddressPicker;
 import com.hnkc.recognize.handler.BankCardPicker;
+import com.hnkc.recognize.handler.CasenoPicker;
 import com.hnkc.recognize.handler.IdCardPicker;
 import com.hnkc.recognize.handler.MobilePicker;
 import com.hnkc.recognize.handler.PlatePicker;
@@ -28,6 +29,7 @@ public class ElementService {
             list.addAll(new BankCardPicker().pick(content));
             list.addAll(new PlatePicker().pick(content));
             list.addAll(new AddressPicker().pick(content));
+            list.addAll(new CasenoPicker().pick(content));
         }
         for (Element one : list) {
             EntityTool.fillProps(one);
