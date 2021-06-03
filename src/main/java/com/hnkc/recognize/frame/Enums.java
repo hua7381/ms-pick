@@ -59,7 +59,7 @@ public class Enums {
         }
     }
 
-    public static final String ELEMENT_TYPE_DESCR = "MOBILE: 手机号, ID_CARD: 身份证号, BANK_CARD: 银行卡号, PLATE: 车牌号, ADDRESS: 地址, QQ: QQ号, WEIXIN: 微信, ALIPAY: 支付宝";
+    public static final String ELEMENT_TYPE_DESCR = "MOBILE 手机号, ID_CARD 身份证号, BANK_CARD 银行卡号, PLATE 车牌号, NAME 姓名, ADDRESS 地址, QQ QQ号, WEIXIN 微信, ALIPAY 支付宝, CASE_NO 案件编号";
     /**
      * @author zhangguihua
      * @date 2021年1月23日
@@ -70,12 +70,12 @@ public class Enums {
         ID_CARD("ID_CARD", "身份证号"),
         BANK_CARD("BANK_CARD", "银行卡号"),
         PLATE("PLATE", "车牌号"),
+        NAME("NAME", "姓名"),
         ADDRESS("ADDRESS", "地址"),
         QQ("QQ", "QQ号"),
         WEIXIN("WEIXIN", "微信"),
         ALIPAY("ALIPAY", "支付宝"),
-        CASE_NO("CASE_NO", "案件编号"),
-        NAME("NAME", "姓名");
+        CASE_NO("CASE_NO", "案件编号");
 
         private ElementType(String id, String label) {
             this.id = id;
