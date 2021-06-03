@@ -35,7 +35,11 @@ public class MyExceptionHandler {
         String message = "";
         Integer status = null;
 
-        if (ex instanceof IllegalArgumentException) {
+        if (ex instanceof HttpMessageNotReadableException) {
+            status = HttpServletResponse.SC_BAD_REQUEST;
+            message = "参数格式错误: " + ex.getMessage();
+
+        } else if (ex instanceof IllegalArgumentException) {
             status = HttpServletResponse.SC_BAD_REQUEST;
             message = ex.getMessage();
 

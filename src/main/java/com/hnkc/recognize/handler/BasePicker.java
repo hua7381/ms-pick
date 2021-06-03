@@ -12,13 +12,22 @@ import com.hnkc.recognize.model.po.Element;
 public class BasePicker {
 
     protected List<Element> find(String content, String reg, String type) {
+        return find(content, reg, type, true);
+    }
+
+    protected List<Element> find(String content, String reg, String type, Boolean isNumber) {
         List<Element> list = new ArrayList<Element>();
         Set<String> set = new HashSet<String>();
-        Matcher mather = Pattern.compile("\\D" + reg + "\\D").matcher("#" + content + "#");
+        Matcher mather = null;
+        if(isNumber) {
+            mather = Pattern.compile("\\D" + reg + "\\D").matcher("#" + content + "#");
+        } else {
+            mather = Pattern.compile(reg).matcher(content);
+        }
         while (mather.find()) {
             Element ele = new Element();
             ele.setType(type);
-            ele.setContent(cut(mather.group()));
+            ele.setContent(isNumber ? cut(mather.group()) : mather.group());
             
             if(!set.contains(ele.getContent())) {
                 list.add(ele);

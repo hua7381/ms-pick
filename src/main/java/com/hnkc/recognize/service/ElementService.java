@@ -8,6 +8,7 @@ import com.hnkc.recognize.handler.BankCardPicker;
 import com.hnkc.recognize.handler.CasenoPicker;
 import com.hnkc.recognize.handler.IdCardPicker;
 import com.hnkc.recognize.handler.MobilePicker;
+import com.hnkc.recognize.handler.NamePicker;
 import com.hnkc.recognize.handler.PlatePicker;
 import com.hnkc.recognize.model.po.Element;
 import com.hnkc.recognize.other.EntityTool;
@@ -30,6 +31,7 @@ public class ElementService {
             list.addAll(new PlatePicker().pick(content));
             list.addAll(new AddressPicker().pick(content));
             list.addAll(new CasenoPicker().pick(content));
+            list.addAll(new NamePicker().pick(content));
         }
         for (Element one : list) {
             EntityTool.fillProps(one);
