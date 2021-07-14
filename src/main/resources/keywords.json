@@ -49,7 +49,7 @@
     { "keyword": "噪音", "containList": ["噪音", "声&扰民"], "excludeList": [] },
     { "keyword": "堵车", "containList": ["车&堵", "车&塞", "车&出入", "交通堵塞"], "excludeList": [] },
     { "keyword": "乱停乱放", "containList": ["乱停乱放", "乱停"], "excludeList": [] },
-    { "keyword": "自杀", "containList": ["自杀", "轻生", "遗书"], "excludeList": [] },
+    { "keyword": "轻生", "containList": ["自杀", "轻生", "遗书"], "excludeList": [] },
     { "keyword": "涉港", "containList": ["香港"], "excludeList": ["六合彩"] },
 
     { "keyword": "纠纷", "containList": ["纠纷"], "excludeList": [] },

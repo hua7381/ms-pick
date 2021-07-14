@@ -47,7 +47,7 @@ public class TestService {
         IPage<Content> page = new Page<Content>(pageNum, PAGE_SIZE);
         IPage<Content> res = contentDao.selectPage(page, wrapper);
         for(Content one : res.getRecords()) {
-            String content = one.getContent() + one.getDisposeSituation();
+            String content = one.getContent() + "," + one.getDisposeSituation();
             one.setKeywords(JSON.toJSONString(keywordService.pickList(content)));
             one.setClues(JSON.toJSONString(elementService.pickList(content), SerializerFeature.PrettyFormat));
             contentDao.updateById(one);
