@@ -1,144 +1,66 @@
 [
-
-    {
-        "keyword": "盗窃",
-        "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷", "骗&转账"],
-        "subList": [
-
-            { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
-            { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
-            { "keyword": "摩托车", "containList": ["摩托车"], "excludeList": [] },
-            { "keyword": "电动车", "containList": ["电动车", "电动三轮车"], "excludeList": ["电池", "电瓶"] },
-            { "keyword": "自行车", "containList": ["自行车"], "excludeList": [] },
-            { "keyword": "车牌", "containList": ["车牌", "车牌号", "没有车牌", "无车牌", "车牌不详"], "excludeList": [] },
-            { "keyword": "电瓶", "containList": ["电瓶", "电池"], "excludeList": [] },
-            { "keyword": "手机", "containList": ["手机"], "excludeList": [] },
-            { "keyword": "电脑", "containList": ["电脑"], "excludeList": ["平板电脑"] },
-            { "keyword": "平板电脑", "containList": ["平板电脑"], "excludeList": [] },
-            { "keyword": "宠物", "containList": ["犬只", "猫只"], "excludeList": [] },
-            { "keyword": "家畜", "containList": ["鸡", "鸭"], "excludeList": [] },
-            { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
-            { "keyword": "电线", "containList": ["电线"], "excludeList": [] },
-            { "keyword": "电缆", "containList": ["电缆"], "excludeList": [] },
-            { "keyword": "水泵", "containList": ["水泵"], "excludeList": [] },
-            { "keyword": "水管", "containList": ["水管"], "excludeList": [] },
-            { "keyword": "衣服", "containList": ["衣服"], "excludeList": [] },
-            { "keyword": "首饰", "containList": ["首饰","项链","戒指"], "excludeList": [] },
-            { "keyword": "不锈钢", "containList": ["不锈钢"], "excludeList": [] },
-            { "keyword": "树木", "containList": ["树木"], "excludeList": [] },
-            { "keyword": "铜管", "containList": ["铜管"], "excludeList": [] },
-            { "keyword": "手提包", "containList": ["手提包"], "excludeList": [] },
-            { "keyword": "钱包", "containList": ["钱包"], "excludeList": [] },
-            { "keyword": "建筑工具", "containList": ["建筑工具"], "excludeList": [] },
-            { "keyword": "平衡车", "containList": ["平衡车"], "excludeList": [] },
-            { "keyword": "快递", "containList": ["快递"], "excludeList": [] },
-            { "keyword": "现金", "containList": ["现金", "钱", "银行卡", "元被盗"], "excludeList": [] }
-        ]
-    },
+    { "keyword": "盗窃", "containList": ["门锁被撬", "撬锁", "偷", "盗"], "excludeList": ["防盗锁", "偷窥", "偷倒", "盗刷", "骗&转账"]},
+    { "keyword": "小汽车", "containList": ["汽车", "小车"], "excludeList": [] },
+    { "keyword": "货车", "containList": ["货车"], "excludeList": [] },
+    { "keyword": "摩托车", "containList": ["摩托车"], "excludeList": [] },
+    { "keyword": "电动车", "containList": ["电动车", "电动三轮车"], "excludeList": ["电池", "电瓶"] },
+    { "keyword": "自行车", "containList": ["自行车"], "excludeList": [] },
+    { "keyword": "车牌", "containList": ["车牌", "车牌号", "没有车牌", "无车牌", "车牌不详"], "excludeList": [] },
+    { "keyword": "电瓶", "containList": ["电瓶", "电池"], "excludeList": [] },
+    { "keyword": "手机", "containList": ["手机"], "excludeList": [] },
+    { "keyword": "电脑", "containList": ["电脑"], "excludeList": ["平板电脑"] },
+    { "keyword": "平板电脑", "containList": ["平板电脑"], "excludeList": [] },
+    { "keyword": "宠物", "containList": ["犬只", "猫只"], "excludeList": [] },
+    { "keyword": "家畜", "containList": ["鸡", "鸭", "猪", "牛", "羊"], "excludeList": [] },
+    { "keyword": "内衣", "containList": ["内衣"], "excludeList": [] },
+    { "keyword": "电线", "containList": ["电线"], "excludeList": [] },
+    { "keyword": "电缆", "containList": ["电缆"], "excludeList": [] },
+    { "keyword": "水泵", "containList": ["水泵"], "excludeList": [] },
+    { "keyword": "水管", "containList": ["水管"], "excludeList": [] },
+    { "keyword": "衣服", "containList": ["衣服"], "excludeList": [] },
+    { "keyword": "首饰", "containList": ["首饰","项链","戒指"], "excludeList": [] },
+    { "keyword": "不锈钢", "containList": ["不锈钢"], "excludeList": [] },
+    { "keyword": "树木", "containList": ["树木"], "excludeList": [] },
+    { "keyword": "铜管", "containList": ["铜管"], "excludeList": [] },
+    { "keyword": "手提包", "containList": ["手提包"], "excludeList": [] },
+    { "keyword": "钱包", "containList": ["钱包"], "excludeList": [] },
+    { "keyword": "建筑工具", "containList": ["建筑工具"], "excludeList": [] },
+    { "keyword": "平衡车", "containList": ["平衡车"], "excludeList": [] },
+    { "keyword": "快递", "containList": ["快递"], "excludeList": [] },
+    { "keyword": "现金", "containList": ["现金", "钱", "元被盗"], "excludeList": [] },
+    { "keyword": "现金", "containList": ["银行卡"], "excludeList": [] },
     
     { "keyword": "工地", "containList": ["工地"], "excludeList": [] },
     
     { "keyword": "撬门", "containList": ["撬门"], "excludeList": [] },
     { "keyword": "破窗", "containList": ["破&窗"], "excludeList": [] },
 
-    {
-        "keyword": "走失",
-        "containList": ["走失", "离家出走", "失联", "小孩&不见"], "excludeList": []
-    },
+    { "keyword": "走失", "containList": ["走失", "离家出走", "失联", "小孩&不见"], "excludeList": [] },
 
-    {
-        "keyword": "诈骗",
-        "containList": ["骗", "冒充", "转账", "盗刷"], "excludeList": []
-    },
-    
-    {
-        "keyword": "打架",
-        "containList": ["打架", "斗殴", "殴打", "被打", "被人打", "打人", "肢体冲突"], "excludeList": []
-    },
-    {
-        "keyword": "网贷",
-        "containList": ["网贷", "网络贷款"], "excludeList": []
-    },
-    {
-        "keyword": "涉赌",
-        "containList": ["赌", "扑克", "麻将", "六合彩", "牌九"], "excludeList": []
-    },
-    {
-        "keyword": "涉黄",
-        "containList": ["涉黄", "色情服务", "卖淫", "嫖娼", "站街女", "妓", "特殊服务"], "excludeList": []
-    },
-    {
-        "keyword": "涉毒",
-        "containList": ["涉毒", "吸毒", "毒品", "毒瘾", "戒毒", "海洛因", "冰毒", "摇头丸", "大麻"], "excludeList": []
-    },
-    {
-        "keyword": "强奸",
-        "containList": ["强奸", "强行发生&性关系", "性侵"], "excludeList": []
-    },
-    {
-        "keyword": "疫情",
-        "containList": ["疫情", "新冠肺", "病毒"], "excludeList": []
-    },
-    {
-        "keyword": "噪音",
-        "containList": ["噪音", "声&扰民"], "excludeList": []
-    },
-    {
-        "keyword": "堵车",
-        "containList": ["车&堵", "车&塞", "车&出入", "交通堵塞"], "excludeList": []
-    },
-    {
-        "keyword": "乱停乱放",
-        "containList": ["乱停乱放", "乱停"], "excludeList": []
-    },
-    {
-        "keyword": "自杀",
-        "containList": ["自杀", "轻生", "遗书"], "excludeList": []
-    },
-    {
-        "keyword": "涉港",
-        "containList": ["香港"], "excludeList": ["六合彩"]
-    },
+    { "keyword": "诈骗", "containList": ["骗", "冒充", "转账", "盗刷"], "excludeList": [] },
 
-    {
-        "keyword": "纠纷",
-        "containList": ["纠纷"], "excludeList": []
-    },
-    {
-        "keyword": "涉访",
-        "containList": ["涉访", "上访"], "excludeList": []
-    },
-    {
-        "keyword": "火灾",
-        "containList": ["火灾", "起火", "火势", "着火"], "excludeList": []
-    },
+    { "keyword": "打架", "containList": ["打架", "斗殴", "殴打", "被打", "被人打", "打人", "肢体冲突"], "excludeList": [] },
+    { "keyword": "网贷", "containList": ["网贷", "网络贷款"], "excludeList": [] },
+    { "keyword": "涉赌", "containList": ["赌", "扑克", "麻将", "六合彩", "牌九"], "excludeList": [] },
+    { "keyword": "涉黄", "containList": ["涉黄", "色情服务", "卖淫", "嫖娼", "站街女", "妓", "特殊服务"], "excludeList": [] },
+    { "keyword": "涉毒", "containList": ["涉毒", "吸毒", "毒品", "毒瘾", "戒毒", "海洛因", "冰毒", "摇头丸", "大麻"], "excludeList": [] },
+    { "keyword": "强奸", "containList": ["强奸", "强行发生&性关系", "性侵"], "excludeList": [] },
+    { "keyword": "疫情", "containList": ["疫情", "新冠肺", "病毒"], "excludeList": [] },
+    { "keyword": "噪音", "containList": ["噪音", "声&扰民"], "excludeList": [] },
+    { "keyword": "堵车", "containList": ["车&堵", "车&塞", "车&出入", "交通堵塞"], "excludeList": [] },
+    { "keyword": "乱停乱放", "containList": ["乱停乱放", "乱停"], "excludeList": [] },
+    { "keyword": "自杀", "containList": ["自杀", "轻生", "遗书"], "excludeList": [] },
+    { "keyword": "涉港", "containList": ["香港"], "excludeList": ["六合彩"] },
 
-    {
-        "keyword": "遗失",
-        "containList": ["遗留", "遗失"], "excludeList": []
-    },
-    {
-        "keyword": "滴滴",
-        "containList": ["滴滴"], "excludeList": []
-    },
-    {
-        "keyword": "老人",
-        "containList": ["老人", "老年", "老年人"], "excludeList": []
-    },
-    {
-        "keyword": "撞车",
-        "containList": ["车&撞", "车&碰"], "excludeList": []
-    },
-    {
-        "keyword": "受伤",
-        "containList": ["伤", "出血"], "excludeList": ["无人受伤", "无人伤", "没人受伤", "没人伤", "无伤", "未受伤", "未伤"]
-    },
-    {
-        "keyword": "醉酒",
-        "containList": ["醉酒", "喝醉"], "excludeList": []
-    },
-    {
-        "keyword": "闹事",
-        "containList": ["闹事"], "excludeList": []
-    }
+    { "keyword": "纠纷", "containList": ["纠纷"], "excludeList": [] },
+    { "keyword": "涉访", "containList": ["涉访", "上访"], "excludeList": [] },
+    { "keyword": "火灾", "containList": ["火灾", "起火", "火势", "着火"], "excludeList": [] },
+
+    { "keyword": "遗失", "containList": ["遗留", "遗失"], "excludeList": [] },
+    { "keyword": "滴滴", "containList": ["滴滴"], "excludeList": [] },
+    { "keyword": "老人", "containList": ["老人", "老年", "老年人"], "excludeList": [] },
+    { "keyword": "撞车", "containList": ["车&撞", "车&碰"], "excludeList": [] },
+    { "keyword": "受伤", "containList": ["伤", "出血"], "excludeList": ["无人受伤", "无人伤", "没人受伤", "没人伤", "无伤", "未受伤", "未伤"] },
+    { "keyword": "醉酒", "containList": ["醉酒", "喝醉"], "excludeList": [] },
+    { "keyword": "闹事", "containList": ["闹事"], "excludeList": [] }
 ]
