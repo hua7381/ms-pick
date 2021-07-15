@@ -27,79 +27,79 @@ public class HttpTool {
     private static final String STATUS = "status";
     private static final Integer MIN_ERR_CODE = 300;
     
-    public static Map<String,String> sendPost(String url, String jsonParam, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendPost(String url, String jsonParam, int connectTimeout, int readTimeout) {
         return doPost(url, "POST", jsonParam, connectTimeout, readTimeout);
     }
     
-    public static Map<String,String> sendPost(String url, Map<String,Object> param, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendPost(String url, Map<String, Object> param, int connectTimeout, int readTimeout) {
         return doPost(url, "POST", JSON.toJSONString(param), connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendPost(String url, String jsonParam) {
+    public static Map<String, String> sendPost(String url, String jsonParam) {
         return doPost(url, "POST", jsonParam, CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendPost(String url, Map<String,Object> param) {
+    public static Map<String, String> sendPost(String url, Map<String, Object> param) {
         return doPost(url, "POST", JSON.toJSONString(param), CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendPut(String url, String jsonParam, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendPut(String url, String jsonParam, int connectTimeout, int readTimeout) {
         return doPost(url, "PUT", jsonParam, connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendPut(String url, Map<String,Object> param, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendPut(String url, Map<String, Object> param, int connectTimeout, int readTimeout) {
         return doPost(url, "PUT", JSON.toJSONString(param), connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendPut(String url, String jsonParam) {
+    public static Map<String, String> sendPut(String url, String jsonParam) {
         return doPost(url, "PUT", jsonParam, CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendPut(String url, Map<String,Object> param) {
+    public static Map<String, String> sendPut(String url, Map<String, Object> param) {
         return doPost(url, "PUT", JSON.toJSONString(param), CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendGet(String url) {
+    public static Map<String, String> sendGet(String url) {
         return doGet(url, "GET", "", CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendGet(String url, String paramStr) {
+    public static Map<String, String> sendGet(String url, String paramStr) {
         return doGet(url, "GET", paramStr, CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendGet(String url, String paramStr, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendGet(String url, String paramStr, int connectTimeout, int readTimeout) {
         return doGet(url, "GET", paramStr, connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendGet(String url, Map<String,Object> param) {
+    public static Map<String, String> sendGet(String url, Map<String, Object> param) {
         return doGet(url, "GET", parseParam(param), CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendGet(String url, Map<String,Object> param, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendGet(String url, Map<String, Object> param, int connectTimeout, int readTimeout) {
         return doGet(url, "GET", parseParam(param), connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendDelete(String url, String paramStr, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendDelete(String url, String paramStr, int connectTimeout, int readTimeout) {
         return doGet(url, "DELETE", paramStr, connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendDelete(String url, Map<String,Object> param, int connectTimeout, int readTimeout) {
+    public static Map<String, String> sendDelete(String url, Map<String, Object> param, int connectTimeout, int readTimeout) {
         return doGet(url, "DELETE", parseParam(param), connectTimeout, readTimeout);
     }
 
-    public static Map<String,String> sendDelete(String url, String paramStr) {
+    public static Map<String, String> sendDelete(String url, String paramStr) {
         return doGet(url, "DELETE", paramStr, CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    public static Map<String,String> sendDelete(String url, Map<String,Object> param) {
+    public static Map<String, String> sendDelete(String url, Map<String, Object> param) {
         return doGet(url, "DELETE", parseParam(param), CONNECTTIMEOUT, READTIMEOUT);
     }
 
-    private static Map<String,String> doPost(String url, String method, String jsonParam, int connectTimeout, int readTimeout) {
+    private static Map<String, String> doPost(String url, String method, String jsonParam, int connectTimeout, int readTimeout) {
         
         OutputStreamWriter writer = null;
         BufferedReader reader = null;
-        Map<String,String> result = new HashMap<String,String>(10);
+        Map<String, String> result = new HashMap<String, String>(10);
         String data = "";
         try {
             // 建立连接
@@ -127,11 +127,11 @@ public class HttpTool {
             writer.write(jsonParam);
             writer.flush();
 
-            result.put("status", conn.getResponseCode()+"");
+            result.put("status", conn.getResponseCode() + "");
 
             try {
                 
-                if(conn.getResponseCode() >= MIN_ERR_CODE) {
+                if (conn.getResponseCode() >= MIN_ERR_CODE) {
                     // 获取错误原因
                     reader = new BufferedReader(new InputStreamReader(conn.getErrorStream(),"utf-8"));
                 } else {
@@ -184,9 +184,9 @@ public class HttpTool {
         return result;
     }
 
-    private static String parseParam(Map<String,Object> param) {
+    private static String parseParam(Map<String, Object> param) {
         StringBuffer sb = new StringBuffer();
-        if(param != null) {
+        if (param != null) {
             for (Object key : param.keySet()) {
                 Object val = param.get(key);
                 if (sb.length() > 0) {
@@ -202,9 +202,9 @@ public class HttpTool {
         return sb.toString();
     }
 
-    private static Map<String,String> doGet(String url, String method, String paramStr, int connectTimeout, int readTimeout) {
+    private static Map<String, String> doGet(String url, String method, String paramStr, int connectTimeout, int readTimeout) {
         BufferedReader in = null;
-        Map<String,String> result = new HashMap<String,String>(10);
+        Map<String, String> result = new HashMap<String, String>(10);
         String data = "";
         try {
             if (paramStr != null && paramStr.length() > 0) {
@@ -224,7 +224,7 @@ public class HttpTool {
 
             conn.connect();
 
-            result.put("status", conn.getResponseCode()+"");
+            result.put("status", conn.getResponseCode() + "");
 
             in = new BufferedReader(new InputStreamReader(conn.getInputStream(),"utf-8"));
             String line;

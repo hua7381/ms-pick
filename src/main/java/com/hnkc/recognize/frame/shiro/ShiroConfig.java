@@ -50,7 +50,7 @@ public class ShiroConfig {
         chainMap.put("/**", "anon");
         bean.setFilterChainDefinitionMap(chainMap);
 
-        Map<String,Filter> filters = new HashMap<String,Filter>(10);
+        Map<String, Filter> filters = new HashMap<String, Filter>(10);
         filters.put("MyShiroAuthFilter", new ShiroAuthFilter());
         bean.setFilters(filters);
 
@@ -87,7 +87,7 @@ public class ShiroConfig {
         CookieRememberMeManager manager = new CookieRememberMeManager();
         manager.setCookie(rememberMeCookie());
         // cookie加密的秘钥
-        manager.setCipherKey(Base64.decode("2AvVhdsgUs0FSA3SDFAdag=="));
+        manager.setCipherKey(Base64.decode("2AvVhdsgUs0FSA3SDFAdag == "));
         return manager;
     }
 

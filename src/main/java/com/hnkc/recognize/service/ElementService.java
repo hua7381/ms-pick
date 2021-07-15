@@ -24,7 +24,7 @@ public class ElementService {
 
     public List<Element> pickList(String content) {
         List<Element> list = new ArrayList<Element>();
-        if(content != null) {
+        if (content != null) {
             list.addAll(new MobilePicker().pick(content));
             list.addAll(new IdCardPicker().pick(content));
             list.addAll(new BankCardPicker().pick(content));

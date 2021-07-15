@@ -30,12 +30,12 @@ public class ParamOfGetPage {
     @ApiModelProperty(value = "结束时间", required = false)
     private Date endTime;
     
-	public String order() {
+    public String order() {
         return 
         (this.orderProp == null || this.orderProp.length() == 0) ?
         null 
         :
-        "order by "+this.orderProp.replaceAll("[A-Z]", "_$0").toLowerCase() + ((this.getIsAsc() != null && this.getIsAsc()) ? " asc" : " desc");
+        "order by " + this.orderProp.replaceAll("[A-Z]", "_$0").toLowerCase() + ((this.getIsAsc() != null && this.getIsAsc()) ? " asc" : " desc");
     }
     
     public Integer getPageNum() {

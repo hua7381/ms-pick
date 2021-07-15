@@ -23,7 +23,7 @@ public class BasePicker {
         List<Element> list = new ArrayList<Element>();
         Set<String> set = new HashSet<String>();
         Matcher mather = null;
-        if(isNumber) {
+        if (isNumber) {
             mather = Pattern.compile("\\D" + reg + "\\D").matcher("#" + content + "#");
         } else {
             mather = Pattern.compile(reg).matcher(content);
@@ -33,7 +33,7 @@ public class BasePicker {
             ele.setType(type);
             ele.setContent(isNumber ? cut(mather.group()) : mather.group());
             
-            if(!set.contains(ele.getContent())) {
+            if (!set.contains(ele.getContent())) {
                 list.add(ele);
                 set.add(ele.getContent());
             }

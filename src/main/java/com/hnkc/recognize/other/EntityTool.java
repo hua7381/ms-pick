@@ -10,13 +10,13 @@ import com.hnkc.recognize.frame.tool.EnumTool;
  */
 public class EntityTool {
 
-	public static void fillProps(Element one) {
+    public static void fillProps(Element one) {
         if (one != null) {
             one.setTypeName(EnumTool.getLabel(Enums.ElementType.class, one.getType()));
-            if(one.getContent() != null) {
+            if (one.getContent() != null) {
                 one.setLength(one.getContent().length());
             }
         }
-	}
+    }
 
 }

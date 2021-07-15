@@ -35,7 +35,7 @@ public class ShiroAuthFilter extends FormAuthenticationFilter {
         resp.setContentType("application/json; charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         PrintWriter writer = resp.getWriter();
-        writer.write(HttpServletResponse.SC_UNAUTHORIZED+"-unauthorized");
+        writer.write(HttpServletResponse.SC_UNAUTHORIZED + "-unauthorized");
         writer.close();
         return false;
     }

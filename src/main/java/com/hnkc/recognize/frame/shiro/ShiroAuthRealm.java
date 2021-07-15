@@ -45,17 +45,17 @@ public class ShiroAuthRealm extends AuthorizingRealm {
 
         LoginUser user = new LoginUser();
         // 测试用
-        if(DEFAULT_USERNAME.equals(username) && DEFAULT_PASSWORD.equals(password)) {
+        if (DEFAULT_USERNAME.equals(username) && DEFAULT_PASSWORD.equals(password)) {
             user.setId("36a718a997ba49f7a8710621eed58a95");
             user.setNo("00001");
             user.setName("管理员");
             user.setDeptNo("440100");
             user.setDeptName("部门A");
             
-        } else if(BY_JSON.equals(password)) {
+        } else if (BY_JSON.equals(password)) {
             String json = username;
             @SuppressWarnings("unchecked")
-            Map<String,Object> obj = JSON.parseObject(json, Map.class);
+            Map<String, Object> obj = JSON.parseObject(json, Map.class);
 
             user.setId((String)obj.get("id"));
             user.setNo((String)obj.get("no"));

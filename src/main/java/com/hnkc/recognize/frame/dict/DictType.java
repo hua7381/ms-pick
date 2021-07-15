@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class DictType {
     private List<DictItem> list;
-    private Map<String,String> map;
+    private Map<String, String> map;
 
     public DictType() {
     }

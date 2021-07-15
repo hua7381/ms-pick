@@ -41,7 +41,7 @@ public class KeywordService {
 
     public List<String> pickList(String content) {
 
-        if(refreshTime == null || System.currentTimeMillis() - refreshTime > CACHE_TIME) {
+        if (refreshTime == null || System.currentTimeMillis() - refreshTime > CACHE_TIME) {
             regs = regDao.selectList(Wrappers.lambdaQuery(Reg.class));
             words = wordDao.getWords(config.getWordSql());
             refreshTime = System.currentTimeMillis();
@@ -54,7 +54,7 @@ public class KeywordService {
         list.addAll(checkByRegs(content, regs));
         list.addAll(checkByWords(content, words));
 
-        for(String one : list) {
+        for (String one : list) {
             if (!set.contains(one)) {
                 set.add(one);
                 result.add(one);
@@ -66,8 +66,8 @@ public class KeywordService {
 
     private List<String> checkByWords(String content, List<String> words) {
         List<String> list = new ArrayList<String>();
-        for(String one : words) {
-            if(content.contains(one)) {
+        for (String one : words) {
+            if (content.contains(one)) {
                 list.add(one);
             }
         }

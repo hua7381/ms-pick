@@ -20,7 +20,7 @@ public class MyLogLayout extends LayoutBase<ILoggingEvent> {
 
     @Override
     public String doLayout(ILoggingEvent event) {
-        Map<String,Object> logObj = new HashMap<String,Object>(20);
+        Map<String, Object> logObj = new HashMap<String, Object>(20);
         logObj.put("log_time", new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(new Date()));
         logObj.put("message", event.getMessage());
         logObj.put("logger_name", event.getLoggerName());
@@ -29,15 +29,15 @@ public class MyLogLayout extends LayoutBase<ILoggingEvent> {
         // 系统名称
         logObj.put("app_name", Constants.SYS_NAME);
         putExtraProps(logObj, event);
-        return JSON.toJSONString(logObj)+"\n";
+        return JSON.toJSONString(logObj) + "\n";
     }
 
-    private Map<String,Object> putExtraProps(Map<String,Object> logObj, ILoggingEvent event) {
+    private Map<String, Object> putExtraProps(Map<String, Object> logObj, ILoggingEvent event) {
         Object[] arr = event.getArgumentArray();
-        if(arr != null && arr.length == 1) {
-            if(arr[0] instanceof Map) {
+        if (arr != null && arr.length == 1) {
+            if (arr[0] instanceof Map) {
                 Map<String, Object> extraProps = convert(arr[0]);
-                for(Object key : extraProps.keySet()) {
+                for (Object key : extraProps.keySet()) {
                     logObj.put((String)key, extraProps.get(key));
                 }
             } else {
@@ -49,7 +49,7 @@ public class MyLogLayout extends LayoutBase<ILoggingEvent> {
 
     @SuppressWarnings("unchecked")
     private Map<String, Object> convert(Object obj) {
-        return (Map<String,Object>)obj;
+        return (Map<String, Object>)obj;
     }
 
 }

@@ -11,10 +11,10 @@ public class Dict {
     /**
      * 单例模式
      */
-    private Dict(){};
+    private Dict() {};
     private static Dict instance;
     public static Dict getInstance() {
-        if(instance == null) {
+        if (instance == null) {
             instance = new Dict();
         }
         return instance;

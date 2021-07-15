@@ -58,12 +58,12 @@ public class MyExceptionHandler {
             message = ex.getMessage();
         } else if (ex instanceof UnauthorizedException) {
             status = HttpServletResponse.SC_FORBIDDEN;
-            logger.warn("无访问权限: "+req.getRequestURI()+", msg: "+ex.getMessage());
+            logger.warn("无访问权限: " + req.getRequestURI() + ", msg: " + ex.getMessage());
             message = "无访问权限";
 
-        } else if(ex instanceof HttpRequestMethodNotSupportedException) {
+        } else if (ex instanceof HttpRequestMethodNotSupportedException) {
             status = HttpServletResponse.SC_METHOD_NOT_ALLOWED;
-            message = "请求方式不支持, url: "+req.getRequestURI()+", errMsg: "+ex.getMessage();
+            message = "请求方式不支持, url: " + req.getRequestURI() + ", errMsg: " + ex.getMessage();
             logger.warn(message);
 
         // 404
@@ -71,26 +71,26 @@ public class MyExceptionHandler {
             status = HttpServletResponse.SC_NOT_FOUND;
             message = "请求的地址不存在";
 
-        } else if(ex instanceof HttpMessageNotReadableException && ex.getCause() != null && ex.getCause() instanceof com.fasterxml.jackson.databind.exc.InvalidFormatException){
+        } else if (ex instanceof HttpMessageNotReadableException && ex.getCause() != null && ex.getCause() instanceof com.fasterxml.jackson.databind.exc.InvalidFormatException) {
             status = HttpServletResponse.SC_BAD_REQUEST;
             String msg = ex.getMessage();
-            if(msg != null) {
+            if (msg != null) {
                 Boolean contain = msg.indexOf(";") > -1;
-                if(contain) {
+                if (contain) {
                     msg = msg.substring(0, msg.indexOf(";"));
                 }
             }
-            message = "JSON参数格式错误:"+msg;
+            message = "JSON参数格式错误:" + msg;
 
         } else {
             String exMsg = ex.getMessage();
-            if(exMsg != null) {
+            if (exMsg != null) {
                 Boolean contain1 = exMsg.contains("ORA-12899");
                 Boolean contain2 = exMsg.contains("ORA-00001");
-                if(contain1) {
+                if (contain1) {
                     status = HttpServletResponse.SC_BAD_REQUEST;
                     message = "输入的某项内容过长";
-                } else if(contain2) {
+                } else if (contain2) {
                     status = HttpServletResponse.SC_BAD_REQUEST;
                     message = "违反唯一约束条件";
                 }
@@ -101,10 +101,10 @@ public class MyExceptionHandler {
                 ex = (Exception) ex.getCause();
             }
 
-            if(ex instanceof BindException) {
+            if (ex instanceof BindException) {
                 status = HttpServletResponse.SC_BAD_REQUEST;
                 message = "参数格式错误";
-                logger.warn("参数格式错误： "+LogTool.simplifyTrace(ex));
+                logger.warn("参数格式错误： " + LogTool.simplifyTrace(ex));
 
             } else {
                 status = HttpServletResponse.SC_INTERNAL_SERVER_ERROR;
@@ -121,19 +121,19 @@ public class MyExceptionHandler {
         try {
             StringBuffer sb = new StringBuffer();
             sb.append("内部错误\n");
-            sb.append("method: "+req.getMethod()+"\n");
-            sb.append("reques url: "+req.getRequestURL()+"\n");
-            sb.append("stack: "+LogTool.simplifyTrace(ex));
+            sb.append("method: " + req.getMethod() + "\n");
+            sb.append("reques url: " + req.getRequestURL() + "\n");
+            sb.append("stack: " + LogTool.simplifyTrace(ex));
             logger.error(sb.toString(), LogTool.props());
         } catch(Exception e) {
-            logger.error("打印异常堆栈失败: "+e.getMessage());
+            logger.error("打印异常堆栈失败: " + e.getMessage());
         }
     }
 
     private String getMsg(MethodArgumentNotValidException ex) {
         StringBuffer sb = new StringBuffer();
         ex.getBindingResult().getFieldErrors().forEach(item -> {
-            if(sb.length() > 0) {
+            if (sb.length() > 0) {
                 sb.append(", ");
             }
             sb.append(item.getDefaultMessage());
