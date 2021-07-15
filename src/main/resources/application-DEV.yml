@@ -2,8 +2,8 @@ spring:
   profiles: DEV
   datasource:
     url: jdbc:oracle:thin:@192.168.0.142:1521/hnkcdb
-    username: zgh
-    password: Created!12
+    username: ic
+    password: hnkc2017110
 logging:
   level:
     com.hnkc: INFO
