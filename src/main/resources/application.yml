@@ -38,5 +38,4 @@ mybatis-plus:
 swagger:
     enable: true
 config:
-    webTitle: 
     wordSql: "select distinct(label) from t_refine_option where field_id is not null"

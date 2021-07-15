@@ -13,21 +13,9 @@ import org.springframework.stereotype.Component;
 @ConfigurationProperties(prefix="config")
 public class Config {
     /**
-     * 网页标题
-     */
-    private String webTitle;
-    /**
-     * 网页标题
+     * 查询word的sql语句
      */
     private String wordSql;
-
-    public String getWebTitle() {
-        return webTitle;
-    }
-
-    public void setWebTitle(String webTitle) {
-        this.webTitle = webTitle;
-    }
 
     public String getWordSql() {
         return wordSql;
