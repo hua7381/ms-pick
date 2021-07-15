@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@68.161.5.88:1521/kczzdb
+    username: info_conduct
+    password: ENC(4KwPLVYNO8hrkAFR7SBPnLi9Auwx7Nf4)
+

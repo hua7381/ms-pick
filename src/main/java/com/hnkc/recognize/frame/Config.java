@@ -16,6 +16,10 @@ public class Config {
      * 网页标题
      */
     private String webTitle;
+    /**
+     * 网页标题
+     */
+    private String wordSql;
 
     public String getWebTitle() {
         return webTitle;
@@ -23,5 +27,13 @@ public class Config {
 
     public void setWebTitle(String webTitle) {
         this.webTitle = webTitle;
+    }
+
+    public String getWordSql() {
+        return wordSql;
+    }
+
+    public void setWordSql(String wordSql) {
+        this.wordSql = wordSql;
     }
 }

@@ -1,12 +1,9 @@
 spring:
-  profiles: DEV
   datasource:
-    url: jdbc:oracle:thin:@192.168.0.142:1521/hnkcdb
+    url: jdbc:oracle:thin:@vip3gz.idcfengye.com:10401/hnkcdb
     username: ic
-    password: hnkc2017110
+    password: ENC(ns9saR7qAAYpg9lBX6udklCtpxhWb5Se)
 logging:
   level:
-    com.hnkc: INFO
-config:
-  webTitle: 示例程序页面标题
+    com.hnkc: DEBUG
 

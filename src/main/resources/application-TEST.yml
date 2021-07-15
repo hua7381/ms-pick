@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.0.142:1521/hnkcdb
+    username: ic
+    password: ENC(ns9saR7qAAYpg9lBX6udklCtpxhWb5Se)
+

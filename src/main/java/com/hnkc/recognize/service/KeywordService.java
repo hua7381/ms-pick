@@ -7,6 +7,8 @@ import java.util.Set;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.hnkc.recognize.dao.RegDao;
+import com.hnkc.recognize.dao.WordDao;
+import com.hnkc.recognize.frame.Config;
 import com.hnkc.recognize.model.po.Reg;
 
 import org.apache.commons.lang3.StringUtils;
@@ -24,23 +26,51 @@ public class KeywordService {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
+    Config config;
+
+    @Autowired
     RegDao regDao;
+
+    @Autowired
+    WordDao wordDao;
 
     public List<String> pickList(String content) {
         List<Reg> regs = regDao.selectList(Wrappers.lambdaQuery(Reg.class));
-        return check(content, regs);
-    }
+        List<String> words = wordDao.getWords(config.getWordSql());
 
-    private List<String> check(String content, List<Reg> regs) {
         List<String> list = new ArrayList<String>();
         Set<String> set = new HashSet<String>();
+        List<String> result = new ArrayList<String>();
+
+        list.addAll(checkByRegs(content, regs));
+        list.addAll(checkByWords(content, words));
+
+        for(String one : list) {
+            if (!set.contains(one)) {
+                set.add(one);
+                result.add(one);
+            }
+        }
+
+        return result;
+    }
+
+    private List<String> checkByWords(String content, List<String> words) {
+        List<String> list = new ArrayList<String>();
+        for(String one : words) {
+            if(content.contains(one)) {
+                list.add(one);
+            }
+        }
+        return list;
+    }
+
+    private List<String> checkByRegs(String content, List<Reg> regs) {
+        List<String> list = new ArrayList<String>();
         for (Reg reg : regs) {
             String keyword = checkReg(content, reg);
             if (StringUtils.isNotEmpty(keyword)) {
-                if (!set.contains(keyword)) {
-                    set.add(keyword);
-                    list.add(keyword);
-                }
+                list.add(keyword);
             }
         }
         return list;

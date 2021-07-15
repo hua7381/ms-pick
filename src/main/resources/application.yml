@@ -32,7 +32,6 @@ logging:
         com: ERROR
         com.hnkc: INFO
 mybatis-plus:
-    mapper-locations: classpath:mybatis/mapper/*.xml
     type-aliases-package: com.hnkc.recognize.model
     configuration:
         map-underscore-to-camel-case: true
@@ -40,3 +39,4 @@ swagger:
     enable: true
 config:
     webTitle: 
+    wordSql: "select distinct(label) from t_refine_option where field_id is not null"
