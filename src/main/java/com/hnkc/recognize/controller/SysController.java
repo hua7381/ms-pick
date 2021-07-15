@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.ApiOperation;
 import springfox.documentation.annotations.ApiIgnore;
 
+/**
+ * @author zhangguihua
+ * @date 2021年7月15日
+ */
 @RestController
 @RequestMapping("sys")
 @ApiIgnore

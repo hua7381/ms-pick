@@ -5,6 +5,10 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+/**
+ * @author zhangguihua
+ * @date 2021年7月15日
+ */
 @ApiModel("匹配规则")
 @TableName("t_recognize_reg")
 public class Reg {

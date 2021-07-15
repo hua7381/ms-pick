@@ -1,5 +1,9 @@
 package com.hnkc.recognize.model.po;
 
+/**
+ * @author zhangguihua
+ * @date 2021年7月15日
+ */
 public class Element {
     private String type;
     private String typeName;

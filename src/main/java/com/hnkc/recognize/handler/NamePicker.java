@@ -6,6 +6,10 @@ import java.util.List;
 import com.hnkc.recognize.frame.Enums;
 import com.hnkc.recognize.model.po.Element;
 
+/**
+ * @author zhangguihua
+ * @date 2021年7月15日
+ */
 public class NamePicker extends BasePicker implements Picker {
     /*
     事主李艳娇（女，49岁，容桂人，联系电话：13392220063）报称其父亲李林洪（男，77岁，容桂人，家属反映有老人痴呆，无带通讯工具）

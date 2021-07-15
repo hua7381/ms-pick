@@ -9,6 +9,10 @@ import java.util.regex.Pattern;
 
 import com.hnkc.recognize.model.po.Element;
 
+/**
+ * @author zhangguihua
+ * @date 2021年7月15日
+ */
 public class BasePicker {
 
     protected List<Element> find(String content, String reg, String type) {
