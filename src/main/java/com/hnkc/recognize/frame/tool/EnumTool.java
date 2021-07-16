@@ -17,7 +17,7 @@ public class EnumTool {
 
     /**
      * 根据id翻译label
-     * 
+
      * @param clz 枚举的类
      * @param id
      * @return
@@ -52,7 +52,7 @@ public class EnumTool {
 
     /**
      * 获取枚举字典
-     * 
+
      * @param type 枚举的类名
      * @return
      */

@@ -19,7 +19,7 @@ import com.alibaba.fastjson.JSON;
  * HTTP请求Restful接口的工具类
  * @author zhangguihua
  * @date 2020/09/29
- * 
+
  */
 public class HttpTool {
     private static final Integer CONNECTTIMEOUT = 10000; 
