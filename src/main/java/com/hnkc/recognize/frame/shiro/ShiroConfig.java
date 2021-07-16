@@ -1,6 +1,5 @@
 package com.hnkc.recognize.frame.shiro;
 
-
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
