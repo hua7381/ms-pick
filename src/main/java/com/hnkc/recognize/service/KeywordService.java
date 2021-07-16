@@ -34,25 +34,25 @@ public class KeywordService {
     @Autowired
     WordDao wordDao;
 
-    private static List<Reg> regs = null;
-    private static List<String> words = null;
-    private static Long refreshTime = null;
+    private static List<Reg> sRegs = null;
+    private static List<String> sWords = null;
+    private static Long sRefreshTime = null;
     private static final Long CACHE_TIME = 1000L * 60 * 5;
 
     public List<String> pickList(String content) {
 
-        if (refreshTime == null || System.currentTimeMillis() - refreshTime > CACHE_TIME) {
-            regs = regDao.selectList(Wrappers.lambdaQuery(Reg.class));
-            words = wordDao.getWords(config.getWordSql());
-            refreshTime = System.currentTimeMillis();
+        if (sRefreshTime == null || System.currentTimeMillis() - sRefreshTime > CACHE_TIME) {
+            sRegs = regDao.selectList(Wrappers.lambdaQuery(Reg.class));
+            sWords = wordDao.getWords(config.getWordSql());
+            sRefreshTime = System.currentTimeMillis();
         }
 
         List<String> list = new ArrayList<String>();
         Set<String> set = new HashSet<String>();
         List<String> result = new ArrayList<String>();
 
-        list.addAll(checkByRegs(content, regs));
-        list.addAll(checkByWords(content, words));
+        list.addAll(checkByRegs(content, sRegs));
+        list.addAll(checkByWords(content, sWords));
 
         for (String one : list) {
             if (!set.contains(one)) {
